@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   image: {
@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     justifyContent: 'center',
     opacity: 0.8,
-    borderRadius: 150,
-
+    borderTopEndRadius: 150 / 2,
+    borderColor: 'midnightblue',
   },
 
   title: {
