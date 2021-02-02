@@ -14,7 +14,7 @@ import DestinationSearch from './src/screens/DestinationSearch';
 // import feed from './assets/data/feed';
 // import SearchResultsScreen from './src/screens/SearchResults';
 
-// const post1 = feed[2];
+// const post1 = feed[0];
 
 const App: () => React$Node = () => {
   return (
