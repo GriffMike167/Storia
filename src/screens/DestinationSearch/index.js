@@ -12,7 +12,7 @@ const DestinationSearch = () => {
     <View style={styles.container}>
       <TextInput
         style={styles.textInput}
-        placeholder="Where is your Wedding?"
+        placeholder="Where would you like to look?"
         value={inputText}
         onChangeText={setInputText}
       />
