@@ -1,29 +1,30 @@
 import React from 'react';
-import {View, Image, Text} from 'react-native';
+import {View, Image, Text, ImagePropTypes} from 'react-native';
 import styles from './styles';
+import feed from '../../../assets/data/feed';
 
-const Post = () => {
+const Post = (props) => {
+  console.log(props);
+  const post = props.post;
+
   return (
     <View style={styles.container}>
       <Image
         style={styles.image}
         source={require('../../../assets/images/4.jpeg')}
       />
-      <Text style={styles.photographer}>Ansel Adams</Text>
+      <Text style={styles.photographer}>{post.photographer}</Text>
       <Text style={styles.description} numberOfLines={3}>
-        Traditional: Classic and traditional photography is similar to what many
-        couples’ parents have from their weddings. These straightforward
-        photographs may not be highly creative—they’re typically shot at eye
-        level and posed—but they stand the test of time
+       {post.description}
       </Text>
       <Text style={styles.price}>
-        <Text style={styles.currentPrice}>$125 </Text>
-        <Text style={styles.specialPrice}> $105</Text>
+        <Text style={styles.currentPrice}>${post.currentPrice} </Text>
+        <Text style={styles.specialPrice}>  ${post.specialPrice}</Text>
         /hr
       </Text>
       <Text style={styles.priceContainer}>
-        <Text style={styles.totalPrice}>$420 total</Text>
-        <Text style={styles.basedPrice}>  (based on four hours)</Text>
+        <Text style={styles.totalPrice}>${post.totalPrice}</Text>
+        <Text style={styles.basedPrice}> (based on four hours)</Text>
       </Text>
     </View>
   );

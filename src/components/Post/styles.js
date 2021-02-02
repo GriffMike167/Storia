@@ -4,10 +4,11 @@ const styles = StyleSheet.create({
   container: {
     margin: 20,
     justifyContent: 'center',
+    paddingTop: 65,
   },
   image: {
     width: '100%',
-    height: '70%',
+    height: '90%',
     // aspectRatio: 1,
     resizeMode: 'cover',
     borderRadius: 15,
