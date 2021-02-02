@@ -4,8 +4,6 @@ import styles from './styles';
 import searchResults from '../../../assets/data/search';
 import Entypo from 'react-native-vector-icons/Entypo';
 
-
-
 const DestinationSearch = () => {
   const [inputText, setInputText] = useState('');
   return (
