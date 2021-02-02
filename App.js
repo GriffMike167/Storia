@@ -8,10 +8,11 @@
 
 import React from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
+import DestinationSearch from './src/screens/DestinationSearch';
 // import HomeScreen from './src/screens/Home';
 // import Post from './src/components/Post';
 // import feed from './assets/data/feed';
-import SearchResultsScreen from './src/screens/SearchResults';
+// import SearchResultsScreen from './src/screens/SearchResults';
 
 // const post1 = feed[2];
 
@@ -22,7 +23,8 @@ const App: () => React$Node = () => {
       <SafeAreaView>
         {/* <HomeScreen /> */}
         {/* <Post post={post1} /> */}
-        <SearchResultsScreen />
+        {/* <SearchResultsScreen /> */}
+        <DestinationSearch />
       </SafeAreaView>
     </>
   );
