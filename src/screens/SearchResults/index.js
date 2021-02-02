@@ -4,7 +4,7 @@ import Post from '../../components/Post';
 import feed from '../../../assets/data/feed';
 
 const SearchResultsScreen = (props) => {
-//   const {posts} = props;
+  //   const {posts} = props;
 
   return (
     <View>

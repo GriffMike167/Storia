@@ -8,10 +8,10 @@ export default [
     currentPrice: 125,
     specialPrice: 105,
     totalPrice: 420,
-    // coordinate: {
-    //   latitude: 32.6428463,
-    //   longitude: -96.9283827,
-    // },
+    coordinate: {
+      latitude: 32.6428463,
+      longitude: -96.9283827,
+    },
   },
   {
     id: '1',
@@ -22,11 +22,11 @@ export default [
     currentPrice: 155,
     specialPrice: 125,
     totalPrice: 500,
-    // coordinate: {
-    //   latitude: 32.6528463,
-    //   longitude: -96.6483827,
+    coordinate: {
+      latitude: 32.6528463,
+      longitude: -96.6483827,
     },
-//   },
+  },
   {
     id: '2',
     image: '/Users/Michael/repos/storia/assets/images/10.jpeg',

@@ -7,10 +7,10 @@ const styles = StyleSheet.create({
     // paddingTop: 5,
   },
   image: {
-    width: '10%',
-    height: '50%',
+    width: '100%',
+    // height: '50%',
     aspectRatio: 3 / 2,
-    resizeMode: 'cover',
+    // resizeMode: 'cover',
     borderRadius: 15,
     // overlayColor: 'hidden',
     // justifyContent: 'center',
