@@ -43,7 +43,7 @@ const HoursScreen = () => {
               style={styles.button}>
               <Text style={{fontSize: 20, color: '#474747'}}>-</Text>
             </Pressable>
-            <Text style={{marginHorizontal: 20, fontSize: 16}}>{guests}</Text>
+            <Text style={{marginHorizontal: 17, fontSize: 16}}>{guests}</Text>
             <Pressable
               onPress={() => setGuests(guests + 10)}
               style={styles.button}>
