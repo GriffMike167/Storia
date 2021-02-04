@@ -2,10 +2,12 @@
 import React, {useState} from 'react';
 import {View, Text, Pressable} from 'react-native';
 import styles from './styles';
+import {useNavigation} from '@react-navigation/native';
 
 const HoursScreen = () => {
   const [hours, setHours] = useState(2);
   const [guests, setGuests] = useState(10);
+  const navigation = useNavigation();
 
   return (
     <View style={{justifyContent: 'space-between', height: '100%'}}>
@@ -52,6 +54,21 @@ const HoursScreen = () => {
           </View>
         </View>
       </View>
+      <Pressable
+        onPress={() => 'Explore'}
+        style={{
+          marginBottom: 40,
+          backgroundColor: 'pink',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: 40,
+          marginHorizontal: 20,
+          borderRadius: 25,
+        }}>
+        <Text style={{fontSize: 20, color: 'midnightblue', fontWeight: 'bold'}}>
+          Search
+        </Text>
+      </Pressable>
     </View>
   );
 };

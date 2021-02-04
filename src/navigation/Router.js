@@ -4,16 +4,26 @@ import {createStackNavigator} from '@react-navigation/stack';
 import DestinationSearch from '../screens/DestinationSearch';
 import HoursScreen from '../screens/Hours';
 const Stack = createStackNavigator();
-
+import HomeTabNavigator from './HomeTabNavigator';
 const Router = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          name={'Home'}
+          component={HomeTabNavigator}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
           name={'Destination Search'}
           component={DestinationSearch}
+          options={{title: 'Search by City'}}
         />
-        <Stack.Screen name={'Hours'} component={HoursScreen} />
+        <Stack.Screen
+          name={'Hours'}
+          component={HoursScreen}
+          options={{title: 'Photographer Needed Info'}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
