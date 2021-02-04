@@ -21,7 +21,7 @@ const HoursScreen = () => {
               style={styles.button}>
               <Text style={{fontSize: 20, color: '#474747'}}>-</Text>
             </Pressable>
-            <Text style={{marginHorizontal: 20, fontSize: 16}}>{hours}</Text>
+            <Text style={{marginHorizontal: 22, fontSize: 16}}>{hours}</Text>
             <Pressable
               onPress={() => setHours(hours + 1)}
               style={styles.button}>
@@ -33,7 +33,7 @@ const HoursScreen = () => {
           <View>
             <Text style={{fontWeight: 'bold'}}>Number of Guest</Text>
             <Text style={{color: '#8d8d8d'}}>
-              The number is not to exceed total 
+              The number is not to exceed total
             </Text>
             <Text style={{color: '#8d8d8d'}}>Allows for need of assitant</Text>
           </View>
@@ -43,7 +43,7 @@ const HoursScreen = () => {
               style={styles.button}>
               <Text style={{fontSize: 20, color: '#474747'}}>-</Text>
             </Pressable>
-            <Text style={{marginHorizontal: 17, fontSize: 16}}>{guests}</Text>
+            <Text style={{marginHorizontal: 19, fontSize: 16}}>{guests}</Text>
             <Pressable
               onPress={() => setGuests(guests + 10)}
               style={styles.button}>
