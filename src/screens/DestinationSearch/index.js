@@ -1,15 +1,11 @@
-/* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
-import {View, TextInput, Text, FlatList, Pressable} from 'react-native';
+import React from 'react';
+import {View} from 'react-native';
 import styles from './styles';
-import searchResults from '../../../assets/data/search';
-import Entypo from 'react-native-vector-icons/Entypo';
 import {useNavigation} from '@react-navigation/native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import SuggestionRow from './SuggestionRow';
 
 const DestinationSearch = () => {
-  const [inputText, setInputText] = useState('');
   const navigation = useNavigation();
 
   return (
@@ -18,7 +14,9 @@ const DestinationSearch = () => {
         placeholder="Where would you like to look?"
         onPress={(data, details = null) => {
           console.log(data, details);
+          navigation.navigate('Hours');
         }}
+        fetchDetails
         styles={{textInput: styles.textInput}}
         query={{
           key: 'AIzaSyC13MxIDC5L4R-GsoNVS30aAdu4XhctdH8',
