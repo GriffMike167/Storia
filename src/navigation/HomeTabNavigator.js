@@ -7,7 +7,13 @@ const Tab = createBottomTabNavigator();
 
 const HomeTabNavigator = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      tabBarOptions={{
+        activeTintColor: 'midnightblue',
+        indicatorStyle: {backgroundColor: 'pink'},
+        fontStyle: 'bold',
+        fontSize: 30,
+      }}>
       <Tab.Screen
         name={'Explore'}
         component={ExploreNavigator}
