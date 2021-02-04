@@ -55,7 +55,12 @@ const HoursScreen = () => {
         </View>
       </View>
       <Pressable
-        onPress={() => 'Explore'}
+        onPress={() =>
+          navigation.navigate('Home', {
+            screen: 'Explore',
+            params: {screen: 'SearchResults'},
+          })
+        }
         style={{
           marginBottom: 40,
           backgroundColor: 'pink',
