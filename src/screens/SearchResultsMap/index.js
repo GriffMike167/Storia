@@ -22,7 +22,7 @@ const SearchResultsMap = () => {
             <CustomMarker 
             image={place.image}
             coordinate={place.coordinate} 
-            price={place.totalPrice}
+            price={place.currentPrice}
             />
         )
       )}

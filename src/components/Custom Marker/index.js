@@ -12,7 +12,7 @@ const CustomMarker = (props) => {
       >
         <View style={{backgroundColor:'white', padding: 5, borderRadius: 20, borderColor: 'pink', borderWidth: 3, }}>
           <Image style={styles.imaage} source={ { uri: image }}/>
-          <Text style={{color: 'midnightblue', fontWeight: 'bold'}}>${price}</Text>
+          <Text style={{color: 'midnightblue', fontWeight: 'bold'}}>${price} /hr</Text>
         </View>
   
       </Marker>
