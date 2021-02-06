@@ -37,8 +37,8 @@ export default [
     specialPrice: 85,
     totalPrice: 340,
     coordinate: {
-      latitude: 31.6428463,
-      longitude: -97.9283827,
+      latitude: 32.5438463,
+      longitude: -96.9273827,
     },
   },
   {

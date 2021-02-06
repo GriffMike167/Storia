@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import places from '../../../assets/data/feed';
 import {View, Text, Image} from 'react-native';
@@ -7,6 +7,8 @@ import { Marker } from 'react-native-maps';
 import CustomMarker from '../../components/Custom Marker'
 
 const SearchResultsMap = () => {
+  const [selectedPlaceId, setSelectedPlaceId] = useState();
+
   return (
     <View style={{width: '100%', height: '100%'}}>
       <MapView style={{width: '100%', height: '100%'}}
@@ -23,6 +25,9 @@ const SearchResultsMap = () => {
             image={place.image}
             coordinate={place.coordinate} 
             price={place.currentPrice}
+            isSelected={place.id === selectedPlaceId}
+            onPress={() => setSelectedPlaceId(place.id)}
+
             />
         )
       )}
