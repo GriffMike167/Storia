@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import places from '../../../assets/data/feed';
 import {View, Text, Image, FlatList, useWindowDimensions} from 'react-native';
@@ -10,6 +10,16 @@ import PostCarouselItem from '../../components/PostCarouselItem'
 const SearchResultsMap = () => {
   const [selectedPlaceId, setSelectedPlaceId] = useState();
   const width = useWindowDimensions().width;
+  const flatlist = useRef();
+
+  useEffect(() => {
+    if (!selectedPlaceId || !flatlist){
+      return;
+    }
+    const index = places.findIndex(place => place.id === selectedPlaceId)
+    flatlist.current.scrollToIndex({index})
+    // console.warn('Scroll to ' + selectedPlaceId)
+  },[selectedPlaceId])
 
 
   return (
@@ -37,7 +47,7 @@ const SearchResultsMap = () => {
 
       </MapView>
       <View style={{postion: 'absolute', bottom: 760}}>
-        <FlatList data={places} renderItem={({item}) =>
+        <FlatList ref={flatlist} data={places} renderItem={({item}) =>
         <PostCarouselItem post={item} />}
         horizontal
         showHorizontalScrollIndicator={false}
