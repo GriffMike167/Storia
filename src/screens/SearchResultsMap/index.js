@@ -11,6 +11,7 @@ const SearchResultsMap = () => {
   const [selectedPlaceId, setSelectedPlaceId] = useState();
   const width = useWindowDimensions().width;
   const flatlist = useRef();
+  const map = useRef();
   const viewConfig = useRef({itemVisiblePercentThreshold: 30});
   const onViewChanged = useRef(({viewableItems}) => {
     if (viewableItems.length > 0) {
@@ -26,14 +27,22 @@ const SearchResultsMap = () => {
     }
     const index = places.findIndex(place => place.id === selectedPlaceId)
     flatlist.current.scrollToIndex({index})
+    const selectedPlace = places[index]
+    const region = {
+      latitude: selectedPlace.coordinate.latitude,
+      longitude: selectedPlace.coordinate.longitude,
+      latitudeDelta: 0.8,
+      longitudeDelta: 0.8
+    }
+    map.current.animateToRegion(region)
     // console.warn('Scroll to ' + selectedPlaceId)
   },[selectedPlaceId])
 
 
   return (
     <View style={{width: '100%', height: '100%'}}>
-      <MapView style={{width: '100%', height: '100%'}}
-      provider={PROVIDER_GOOGLE}
+      <MapView ref={map} style={{width: '100%', height: '100%'}}
+      // provider={PROVIDER_GOOGLE}
         initialRegion={{
           latitude: 32.64491,
           longitude: -96.927881,
