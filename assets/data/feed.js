@@ -55,4 +55,18 @@ export default [
       longitude: -96.97283827,
     },
   },
+  {
+    id: '4',
+    image: '/Users/Michael/repos/storia/assets/images/13.jpeg',
+    photographer: 'Weegee',
+    description:
+      'Black and White: Black-and-white wedding images are more about editing than photography style, although some photographers do use solely black-and-white cameras.',
+    currentPrice: 175,
+    specialPrice: 155,
+    totalPrice: 620,
+    coordinate: {
+      latitude: 32.753177,
+      longitude: -97.3327459,
+    },
+  },
 ];
