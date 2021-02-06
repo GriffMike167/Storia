@@ -25,7 +25,7 @@ const SearchResultsMap = () => {
   return (
     <View style={{width: '100%', height: '100%'}}>
       <MapView style={{width: '100%', height: '100%'}}
-      // provider={PROVIDER_GOOGLE}
+      provider={PROVIDER_GOOGLE}
         initialRegion={{
           latitude: 32.64491,
           longitude: -96.927881,
@@ -54,6 +54,10 @@ const SearchResultsMap = () => {
         // snapToInterval={ width -30}
         snapToAlignment={'center'}
         decelerationRate={'fast'}
+        viewabilityConfig={{itemVisiblePercentThreshold: 70}}
+        onViewableItemsChanged={({viewableItems}) => {
+          console.warn(viewableItems)
+        }}
 
         
         />
