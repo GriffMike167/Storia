@@ -10,7 +10,7 @@ export default [
     totalPrice: 420,
     equipment: 'Nikon D3500',
     props: '36 in Sparklers Walk, 8ft Flower Arch, PhotoBooth',
-    workExperince: 'I have been taking wedding phots for ten years, some of my work had been featured in Bride Magazine.',
+    workExperince: 'I have been taking wedding phots for ten years, some of my work has been featured in Bride Magazine.',
     venuesWorked: 'The White Sparrow Barn, Camp Comfort B & B, Gruene Estates',
     coordinate: {
       latitude: 32.6428463,
