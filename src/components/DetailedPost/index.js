@@ -19,6 +19,10 @@ const Post = (props) => {
         <Text style={styles.specialPrice}> ${post.specialPrice}</Text>
         /hr
       </Text>
+      {/* <Text style={styles.priceContainer}>
+        <Text style={styles.totalPrice}>${post.totalPrice}</Text>
+        <Text style={styles.basedPrice}> (based on four hours)</Text>
+      </Text> */}
       <Text style={styles.equipmentContainer}>
           Equipment: 
           <Text style={styles.equipment}>  {post.equipment}</Text>

@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     margin: 20,
     opacity: 0.8,
     // justifyContent: 'center',
-    paddingTop: 35,
+    // paddingTop: 35,
     // flex: 1,
 
 

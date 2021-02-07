@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, Text, ImagePropTypes, useWindowDimensions} from 'react-native';
+import {View, Image, Text, useWindowDimensions} from 'react-native';
 import styles from './styles';
 import feed from '../../../assets/data/feed';
 
