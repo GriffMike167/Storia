@@ -18,8 +18,8 @@ const Router = () => {
       <Stack.Navigator>
         <Stack.Screen
           name={'Home'}
-          component={VenueResultsTabNavigator}
-          options={{headerShown: true}}
+          component={HomeTabNavigator}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name={'Destination Search'}
