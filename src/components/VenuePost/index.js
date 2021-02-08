@@ -1,15 +1,15 @@
 import React from 'react';
 import {Pressable, View, Image, Text} from 'react-native';
 import styles from './styles';
-import venue from '../../../assets/data/venues';
+import venues from '../../../assets/data/venues';
 import {useNavigation} from '@react-navigation/native';
 
-// post = venue[3];
+// post = venues[0];
 
 
 const VenuePost = (props) => {
   console.log(props);
-  const post = props.post;
+  const post = props.post
 
 //   const navigation = useNavigation();
 
@@ -27,13 +27,13 @@ const VenuePost = (props) => {
         {post.description}
       </Text>
       <Text style={styles.price}>
-        <Text style={styles.currentPrice}>${post.currentPrice} </Text>
-        <Text style={styles.specialPrice}> ${post.specialPrice}</Text>
-        /hr
+        {/* <Text style={styles.currentPrice}>${post.currentPrice} </Text> */}
+        <Text style={styles.specialPrice}> ${post.specialPrice} </Text>
+          for 1/2 day
       </Text>
       <Text style={styles.priceContainer}>
         <Text style={styles.totalPrice}>${post.totalPrice}</Text>
-        {/* <Text style={styles.basedPrice}> (based on four hours)</Text> */}
+        <Text style={styles.basedPrice}> (based on full day)</Text>
       </Text> 
      </View>
   );

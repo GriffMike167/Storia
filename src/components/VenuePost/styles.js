@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     container: {
       margin: 20,
       // justifyContent: 'center',
-      paddingTop: 35,
+      paddingTop: 5,
       opacity: 0.8,
       shadowColor: "#000",
       shadowOffset: {
@@ -42,12 +42,12 @@ const styles = StyleSheet.create({
       color: 'midnightblue',
       marginVertical: 10,
     },
-    currentPrice: {
-      fontSize: 16,
-      lineHeight: 22,
-      color: 'midnightblue',
-      textDecorationLine: 'line-through',
-    },
+    // currentPrice: {
+    //   fontSize: 16,
+    //   lineHeight: 22,
+    //   color: 'midnightblue',
+    //   textDecorationLine: 'line-through',
+    // },
     specialPrice: {
       fontWeight: 'bold',
       fontSize: 16,

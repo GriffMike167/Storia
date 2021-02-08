@@ -5,7 +5,8 @@ import DestinationSearch from '../screens/DestinationSearch';
 import HoursScreen from '../screens/Hours';
 import HomeTabNavigator from './HomeTabNavigator';
 import PostScreen from '../screens/PostScreen';
-import VenuePostScreen from '../screens/VenusPost';
+import VenueResultsScreen from '../screens/VenueResults';
+import VenueResultsTabNavigator from './VenueResultsTabNavigator';
 
 const Stack = createStackNavigator();
 
@@ -16,9 +17,9 @@ const Router = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name={'Home'}
-          component={VenuePostScreen}
-          options={{headerShown: false}}
+          name={'Venues'}
+          component={VenueResultsTabNavigator}
+          // options={{headerShown: true}}
         />
         <Stack.Screen
           name={'Destination Search'}
