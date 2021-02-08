@@ -4,6 +4,7 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import SearchResultsScreen from '../screens/SearchResults';
 import SearchResultsMap from '../screens/SearchResultsMap';
 import VenueResultsScreen from '../screens/VenueResults';
+import VenueResultsMap from '../screens/VenueResultsMap';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -18,7 +19,7 @@ const VenueResultsTabNavigator = () => {
         padddingTop: 35,
       }}>
       <Tab.Screen name={'list'} component={VenueResultsScreen} />
-      <Tab.Screen name={'map'} component={VenueResultsScreen} />
+      <Tab.Screen name={'map'} component={VenueResultsMap} />
     </Tab.Navigator>
   );
 };

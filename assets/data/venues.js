@@ -23,7 +23,7 @@ export default [
         //  specialPrice: 1105,
          totalPrice: 4500,
          coordinate: {
-        latitude: 32.6428463,
+        latitude: 31.7428463,
         longitude: -96.9283827,
          },
       },
@@ -37,7 +37,7 @@ export default [
         //  specialPrice: 905,
          totalPrice: 4020,
          coordinate: {
-        latitude: 32.6428463,
+        latitude: 33.6428463,
         longitude: -96.9283827,
          },
       },
@@ -52,7 +52,7 @@ export default [
         totalPrice: 5000,
         coordinate: {
         latitude: 32.6428463,
-        longitude: -96.9283827,
+        longitude: -97.9283827,
         },
       },
 ]

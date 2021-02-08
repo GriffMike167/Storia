@@ -26,14 +26,19 @@ const HomeScreen = () => {
         </Pressable>
       </ImageBackground>
     </View>
-    <Text style={styles.promoTitle} scrollEnabled = {true}>Venues</Text>
+    <View>
+    <Pressable scrollEnabled = {true}onPress={() => console.warn('Venues Button Clicked')}><Text  style={styles.promoTitle} >Venues</Text>
     <View style={styles.promoContanier} scrollEnabled = {true}>
-      <View style={styles.innerContanier}>
+      <View style={styles.innerContanier} >
       <ImageBackground style={styles.imageTwo} source={require('../../../assets/images/21.jpg')} >
       <Text style={styles.titleTwo}>Ma Mansion</Text>
       </ImageBackground>
       </View>
     </View>
+    </Pressable>
+    </View>
+    <View>
+    <Pressable scrollEnabled = {true}onPress={() => console.warn('Catering Button Clicked')}>
       <Text  style={styles.promoTwoTitle}>Catering</Text>
     <View style={styles.promoContanier} scrollEnabled = {true}>
       <View style={styles.innerContanier} scrollEnabled = {true}>
@@ -41,6 +46,8 @@ const HomeScreen = () => {
       <Text style={styles.titleTwo}>CN Catering</Text>
       </ImageBackground>
       </View>
+    </View>
+    </Pressable>
     </View>
     </ScrollView>
 

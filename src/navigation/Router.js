@@ -17,14 +17,19 @@ const Router = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name={'Venues'}
+          name={'Home'}
           component={VenueResultsTabNavigator}
-          // options={{headerShown: true}}
+          options={{headerShown: true}}
         />
         <Stack.Screen
           name={'Destination Search'}
           component={DestinationSearch}
           options={{title: 'Search by City'}}
+        />
+        <Stack.Screen
+          name={'Venue Search'}
+          component={VenueResultsTabNavigator}
+          options={{title: 'Venues by City'}}
         />
         <Stack.Screen
           name={'Hours'}

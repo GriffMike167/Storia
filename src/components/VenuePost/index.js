@@ -11,13 +11,13 @@ const VenuePost = (props) => {
   console.log(props);
   const post = props.post
 
-//   const navigation = useNavigation();
+  const navigation = useNavigation();
 
-//   const goTovenuesPage = () => {
-//     navigation.navigate('venues', {venuesId: venues.id})
-// onPress={goTovenuesPage} 
+  const goToVenuesPage = () => {
+    navigation.navigate('venues')
+// onPress={goToVenuesPage} 
 
-//   }
+  }
 
   return (
     <View style={styles.container}>
