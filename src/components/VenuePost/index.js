@@ -1,24 +1,28 @@
 import React from 'react';
-import {Pressable, Image, Text} from 'react-native';
+import {Pressable, View, Image, Text} from 'react-native';
 import styles from './styles';
-// import feed from '../../../assets/data/feed';
+import venue from '../../../assets/data/venues';
 import {useNavigation} from '@react-navigation/native';
 
-const Post = (props) => {
+// post = venue[3];
+
+
+const VenuePost = (props) => {
   console.log(props);
   const post = props.post;
 
-  const navigation = useNavigation();
+//   const navigation = useNavigation();
 
-  const goToPostPage = () => {
-    navigation.navigate('Post', {postId: post.id})
+//   const goTovenuesPage = () => {
+//     navigation.navigate('venues', {venuesId: venues.id})
+// onPress={goTovenuesPage} 
 
-  }
+//   }
 
   return (
-    <Pressable onPress={goToPostPage} style={styles.container}>
+    <View style={styles.container}>
       <Image style={styles.image} source={{uri: post.image}} />
-      <Text style={styles.photographer}>{post.photographer}</Text>
+       <Text style={styles.photographer}>{post.venue}</Text>
       <Text style={styles.description} numberOfLines={3}>
         {post.description}
       </Text>
@@ -29,10 +33,10 @@ const Post = (props) => {
       </Text>
       <Text style={styles.priceContainer}>
         <Text style={styles.totalPrice}>${post.totalPrice}</Text>
-        <Text style={styles.basedPrice}> (based on four hours)</Text>
-      </Text>
-    </Pressable>
+        {/* <Text style={styles.basedPrice}> (based on four hours)</Text> */}
+      </Text> 
+     </View>
   );
 };
 
-export default Post;
+export default VenuePost;

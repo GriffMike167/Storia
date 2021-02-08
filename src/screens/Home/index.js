@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ImageBackground, Pressable} from 'react-native';
+import {View, Text, ImageBackground, Pressable, ScrollView, Image} from 'react-native';
 import styles from './styles';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import {useNavigation} from '@react-navigation/native';
@@ -7,6 +7,7 @@ const HomeScreen = () => {
   const navigation = useNavigation();
 
   return (
+    <ScrollView scrollEnabled = {true} vertical>
     <View>
       <Pressable
         style={styles.searchButton}
@@ -25,6 +26,25 @@ const HomeScreen = () => {
         </Pressable>
       </ImageBackground>
     </View>
+    <Text style={styles.promoTitle} scrollEnabled = {true}>Venues</Text>
+    <View style={styles.promoContanier} scrollEnabled = {true}>
+      <View style={styles.innerContanier}>
+      <ImageBackground style={styles.imageTwo} source={require('../../../assets/images/21.jpg')} >
+      <Text style={styles.titleTwo}>Ma Mansion</Text>
+      </ImageBackground>
+      </View>
+    </View>
+      <Text  style={styles.promoTwoTitle}>Catering</Text>
+    <View style={styles.promoContanier} scrollEnabled = {true}>
+      <View style={styles.innerContanier} scrollEnabled = {true}>
+      <ImageBackground style={styles.imageTwo} source={require('../../../assets/images/31.jpeg')} >
+      <Text style={styles.titleTwo}>CN Catering</Text>
+      </ImageBackground>
+      </View>
+    </View>
+    </ScrollView>
+
+
   );
 };
 

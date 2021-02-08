@@ -5,6 +5,17 @@ const styles = StyleSheet.create({
     margin: 20,
     // justifyContent: 'center',
     // paddingTop: 5,
+    opacity: 0.8,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.44,
+    shadowRadius: 9.27,
+
+    elevation: 70,
+
   },
   image: {
     width: '100%',
@@ -17,38 +28,42 @@ const styles = StyleSheet.create({
   },
   photographer: {
     marginVertical: 10,
-    fontSize: 22,
-    color: '#5b5b5b',
+    fontSize: 20,
+    color: 'midnightblue',
   },
   description: {
-    fontSize: 18,
+    fontSize: 17,
     lineHeight: 22,
-    color: '#5b5b5b',
+    color: 'midnightblue',
   },
   price: {
     fontSize: 16,
     lineHeight: 22,
-    color: '#5b5b5b',
+    color: 'midnightblue',
     marginVertical: 10,
   },
   currentPrice: {
     fontSize: 16,
     lineHeight: 22,
-    color: '#5b5b5b',
+    color: 'midnightblue',
     textDecorationLine: 'line-through',
   },
   specialPrice: {
     fontWeight: 'bold',
     fontSize: 16,
     lineHeight: 22,
-    color: '#5b5b5b',
+    color: 'midnightblue',
   },
   totalPrice: {
     fontWeight: 'bold',
     fontSize: 18,
     lineHeight: 22,
-    color: '#5b5b5b',
+    color: 'midnightblue',
     textDecorationLine: 'underline',
+  },
+  basedPrice: {
+    
+    color: 'midnightblue',
   },
 });
 

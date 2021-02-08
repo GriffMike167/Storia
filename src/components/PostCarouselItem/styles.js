@@ -4,6 +4,8 @@ const styles = StyleSheet.create({
   container: {
     height: 120,
     padding: 10,
+    opacity: 0.9,
+
     // flexDirection:'row',
     // alignItems: 'center',
     overflow: 'hidden',

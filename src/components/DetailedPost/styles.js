@@ -5,15 +5,8 @@ const styles = StyleSheet.create({
     margin: 20,
     // opacity: 0.8,
     // justifyContent: 'center',
-    paddingTop: 35,
+    paddingTop:2,
     // flex: 1,
-
-
-
-   
-  },
-  imageContainer: {
-    margin: 20,
     opacity: 0.8,
     // justifyContent: 'center',
     // paddingTop: 35,
@@ -30,7 +23,14 @@ const styles = StyleSheet.create({
     shadowRadius: 7.27,
 
     elevation: 70,
+
+
+
+   
   },
+  
+  
+  
   image: {
     width: '100%',
     // height: '50%',
@@ -38,7 +38,9 @@ const styles = StyleSheet.create({
     // resizeMode: 'cover',
     borderRadius: 15,
     // overlayColor: 'hidden',
-    // justifyContent: 'center',
+    justifyContent: 'center',
+    // flex: 1,
+
   },
   photographer: {
     marginVertical: 10,

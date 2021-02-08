@@ -63,7 +63,7 @@ const SearchResultsMap = () => {
       )}
 
       </MapView>
-      <View style={{postion: 'absolute', bottom: 760}}>
+      <View style={{postion: 'absolute', bottom: 675}}>
         <FlatList ref={flatlist} data={places} renderItem={({item}) =>
         <PostCarouselItem post={item} />}
         horizontal

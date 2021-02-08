@@ -4,7 +4,7 @@ export default [
     image: '/Users/Michael/repos/storia/assets/images/4.jpeg',
     photographer: 'Ansel Adams',
     description:
-      'Traditional: Classic and traditional photography is similar to what many couples parents have from their weddings. These straightforward photographs may not be highly creative—they’re typically shot at eye level and posed—but they stand the test of time',
+      'Traditional: Classic and traditional photography is similar to what many couples parents have from their weddings. These straightforward photographs may not be highly creative—they’re typically shot at eye level and posed—but they stand the test of time.',
     currentPrice: 125,
     specialPrice: 105,
     totalPrice: 420,

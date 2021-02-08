@@ -3,15 +3,21 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import DestinationSearch from '../screens/DestinationSearch';
 import HoursScreen from '../screens/Hours';
-const Stack = createStackNavigator();
 import HomeTabNavigator from './HomeTabNavigator';
+import PostScreen from '../screens/PostScreen';
+import VenuePostScreen from '../screens/VenusPost';
+
+const Stack = createStackNavigator();
+
+
+
 const Router = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
           name={'Home'}
-          component={HomeTabNavigator}
+          component={VenuePostScreen}
           options={{headerShown: false}}
         />
         <Stack.Screen
@@ -23,6 +29,11 @@ const Router = () => {
           name={'Hours'}
           component={HoursScreen}
           options={{title: 'Photographer Needed Info'}}
+        />
+         <Stack.Screen
+          name={'Post'}
+          component={PostScreen}
+          options={{title: 'Photographer'}}
         />
       </Stack.Navigator>
     </NavigationContainer>

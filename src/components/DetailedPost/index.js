@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, Text, ImagePropTypes} from 'react-native';
+import {View, Image, Text, ScrollView} from 'react-native';
 import styles from './styles';
 import feed from '../../../assets/data/feed';
 
@@ -8,7 +8,8 @@ const Post = (props) => {
   const post = props.post;
 
   return (
-    <View style={styles.container}>
+      <ScrollView scrollEnabled = {true} vertical>
+      <View style={styles.container}>
       <Image style={styles.image} source={{uri: post.image}} />
       <Text style={styles.photographer}>{post.photographer}</Text>
       <Text style={styles.description} >
@@ -40,6 +41,8 @@ const Post = (props) => {
       <Text  style={styles.venuesWorked}>  {post.venuesWorked}</Text>
       </Text>
     </View>
+    </ScrollView>
+
   );
 };
 

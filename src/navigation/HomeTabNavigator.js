@@ -2,7 +2,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/Home';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
-// import ExploreNavigator from '../navigation/ExploreNavigator';
+import ExploreNavigator from '../navigation/ExploreNavigator';
 import SearchResultsMap from '../screens/SearchResultsMap';
 import PostScreen from '../screens/PostScreen';
 const Tab = createBottomTabNavigator();
@@ -18,7 +18,7 @@ const HomeTabNavigator = () => {
       }}>
       <Tab.Screen
         name={'Explore'}
-        component={PostScreen}
+        component={ExploreNavigator}
         options={{
           tabBarIcon: ({}) => (
             <EvilIcons name="search" size={32} color="pink" fontWeight="bold" />
