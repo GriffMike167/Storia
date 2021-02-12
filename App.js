@@ -7,9 +7,10 @@
  */
 import 'react-native-gesture-handler';
 import React from 'react';
-import {SafeAreaView, StatusBar} from 'react-native';
+import {StatusBar} from 'react-native';
 import Router from './src/navigation/Router';
-
+import {withAuthenticator} from 'aws-amplify-react-native';
+//
 
 // const post1 = feed[0];
 
@@ -22,4 +23,4 @@ const App: () => React$Node = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);

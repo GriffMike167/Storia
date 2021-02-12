@@ -1,1 +1,10 @@
-{}
+{
+  "auth": {
+    "storia9d2b3a80": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
