@@ -1,0 +1,15 @@
+type Post @model {
+  id: ID!
+  image: String!
+  photographer: String!
+  description: String!
+  currentPrice: Float!
+  specialPrice: Float
+  equipment: String!
+  props: String!
+  workExperince: String!
+  venuesWorked: String!
+  latitude: Float!
+  longitude: Float!
+}
+
