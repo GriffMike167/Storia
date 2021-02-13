@@ -13,3 +13,26 @@ type Post @model {
   longitude: Float!
 }
 
+type Venue @model {
+  id: ID!,
+  image: String!
+  venue: String!
+  description: String!
+  specialPrice: Float!
+  totalPrice: Float!
+  latitude: Float!
+  longitude: Float!
+
+}
+
+type Caterer @model {
+  id: ID!,
+  image: String!
+  caterer: String!
+  description: String!
+  perPersonPrice: Float!
+  totalPrice: Float!
+  latitude: Float!
+  longitude: Float!
+
+}
