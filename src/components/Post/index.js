@@ -3,6 +3,7 @@ import {Pressable, Image, Text} from 'react-native';
 import styles from './styles';
 // import feed from '../../../assets/data/feed';
 import {useNavigation} from '@react-navigation/native';
+const hours = 4;
 
 const Post = (props) => {
   console.log(props);
@@ -11,9 +12,8 @@ const Post = (props) => {
   const navigation = useNavigation();
 
   const goToPostPage = () => {
-    navigation.navigate('Post', {postId: post.id})
-
-  }
+    navigation.navigate('Post', {postId: post.id});
+  };
 
   return (
     <Pressable onPress={goToPostPage} style={styles.container}>
@@ -28,7 +28,7 @@ const Post = (props) => {
         /hr
       </Text>
       <Text style={styles.priceContainer}>
-        <Text style={styles.totalPrice}>${post.totalPrice}</Text>
+        <Text style={styles.totalPrice}>${post.specialPrice * hours}</Text>
         <Text style={styles.basedPrice}> (based on four hours)</Text>
       </Text>
     </Pressable>

@@ -4,17 +4,15 @@ import DetailedPost from '../../components/DetailedPost';
 import {useRoute} from '@react-navigation/native';
 import places from '../../../assets/data/feed';
 
-
-
 const PostScreen = () => {
-    const route = useRoute();
-    const post = places.find(place => place.id === route.params.postId);
+  const route = useRoute();
+  const post = places.find((place) => place.id === route.params.postId);
 
-    return(
+  return (
     <View>
-        <DetailedPost post={post}/>
+      <DetailedPost post={post} />
     </View>
-    )
-}
+  );
+};
 
-export default PostScreen
+export default PostScreen;
