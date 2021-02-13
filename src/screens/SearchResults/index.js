@@ -8,6 +8,7 @@ import {listPosts} from '../../graphql/queries';
 const SearchResultsScreen = (props) => {
   //   const {posts} = props;
   const [posts, setPosts] = useState([]);
+  console.log(props);
   useEffect(() => {
     const fetchPosts = async () => {
       try {

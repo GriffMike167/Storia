@@ -1,19 +1,19 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useState, useRef} from 'react';
-// import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-// import posts from '../../../assets/data/feed';
-import {View, FlatList, useWindowDimensions} from 'react-native';
+import {View, FlatList} from 'react-native';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
-// import {Marker} from 'react-native-maps';
 import CustomMarker from '../../components/Custom Marker';
 import PostCarouselItem from '../../components/PostCarouselItem';
 import {API, graphqlOperation} from 'aws-amplify';
 import {listPosts} from '../../graphql/queries';
+// import {useRoute} from '@react-navigation/native';
 
-const SearchResultsMap = () => {
+const SearchResultsMap = (props) => {
   const [selectedPlaceId, setSelectedPlaceId] = useState();
   const [posts, setPosts] = useState([]);
+  // const route = useRoute();
+  console.log(props);
 
-  const width = useWindowDimensions().width;
   const flatlist = useRef();
   const map = useRef();
   const viewConfig = useRef({itemVisiblePercentThreshold: 30});
@@ -51,7 +51,7 @@ const SearchResultsMap = () => {
     };
     map.current.animateToRegion(region);
     // console.warn('Scroll to ' + selectedPlaceId)
-  }, [selectedPlaceId]);
+  }, [posts, selectedPlaceId]);
 
   return (
     <View style={{width: '100%', height: '100%'}}>
