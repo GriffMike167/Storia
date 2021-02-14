@@ -1,5 +1,4 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import SearchResultsScreen from '../screens/SearchResults';
 import SearchResultsMap from '../screens/SearchResultsMap';
@@ -9,7 +8,7 @@ const Tab = createMaterialTopTabNavigator();
 
 const SearchResultsTabNavigator = () => {
   const route = useRoute();
-  const {hours} = route.params;
+  const {hours, viewport} = route.params;
   return (
     <Tab.Navigator
       tabBarOptions={{
@@ -19,10 +18,10 @@ const SearchResultsTabNavigator = () => {
         fontSize: 30,
       }}>
       <Tab.Screen name={'list'}>
-        {() => <SearchResultsScreen hours={hours} />}
+        {() => <SearchResultsScreen hours={hours} viewport={viewport} />}
       </Tab.Screen>
       <Tab.Screen name={'map'}>
-        {() => <SearchResultsMap hours={hours} />}
+        {() => <SearchResultsMap hours={hours} viewport={viewport} />}
       </Tab.Screen>
     </Tab.Navigator>
   );

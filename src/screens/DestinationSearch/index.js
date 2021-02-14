@@ -14,7 +14,7 @@ const DestinationSearch = () => {
         placeholder="Where would you like to look?"
         onPress={(data, details = null) => {
           console.log(data, details);
-          navigation.navigate('Hours');
+          navigation.navigate('Hours', {viewport: details.geometry.viewport});
         }}
         fetchDetails
         styles={{textInput: styles.textInput}}

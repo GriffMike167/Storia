@@ -2,12 +2,13 @@
 import React, {useState} from 'react';
 import {View, Text, Pressable} from 'react-native';
 import styles from './styles';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 
 const HoursScreen = () => {
   const [hours, setHours] = useState(2);
   const [guests, setGuests] = useState(10);
   const navigation = useNavigation();
+  const route = useRoute();
 
   return (
     <View style={{justifyContent: 'space-between', height: '100%'}}>
@@ -62,6 +63,7 @@ const HoursScreen = () => {
               screen: 'SearchResults',
               params: {
                 hours: hours,
+                viewport: route.params.viewport,
               },
             },
           })
