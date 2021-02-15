@@ -1,40 +1,30 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useEffect, useState, useRef} from 'react';
-import {View, FlatList} from 'react-native';
-import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+import React, {useState, useEffect, useRef} from 'react';
+import {View, FlatList, useWindowDimensions} from 'react-native';
+import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import CustomMarker from '../../components/Custom Marker';
 import PostCarouselItem from '../../components/PostCarouselItem';
+
 import {API, graphqlOperation} from 'aws-amplify';
 import {listPosts} from '../../graphql/queries';
-// import {useRoute} from '@react-navigation/native';
 
 const SearchResultsMap = (props) => {
-  const [selectedPlaceId, setSelectedPlaceId] = useState();
-  const [posts, setPosts] = useState([]);
-  // const route = useRoute();
-  console.log(props);
+  const {posts} = props;
+
+  const [selectedPlaceId, setSelectedPlaceId] = useState(null);
 
   const flatlist = useRef();
   const map = useRef();
-  const viewConfig = useRef({itemVisiblePercentThreshold: 30});
+
+  const viewConfig = useRef({itemVisiblePercentThreshold: 70});
   const onViewChanged = useRef(({viewableItems}) => {
     if (viewableItems.length > 0) {
       const selectedPlace = viewableItems[0].item;
       setSelectedPlaceId(selectedPlace.id);
     }
   });
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const postsResults = await API.graphql(graphqlOperation(listPosts));
 
-        setPosts(postsResults.data.listPosts.items);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    fetchPosts();
-  }, []);
+  // const width = useWindowDimensions().width;
 
   useEffect(() => {
     if (!selectedPlaceId || !flatlist) {
@@ -42,6 +32,7 @@ const SearchResultsMap = (props) => {
     }
     const index = posts.findIndex((place) => place.id === selectedPlaceId);
     flatlist.current.scrollToIndex({index});
+
     const selectedPlace = posts[index];
     const region = {
       latitude: selectedPlace.latitude,
@@ -50,8 +41,7 @@ const SearchResultsMap = (props) => {
       longitudeDelta: 0.8,
     };
     map.current.animateToRegion(region);
-    // console.warn('Scroll to ' + selectedPlaceId)
-  }, [posts, selectedPlaceId]);
+  });
 
   return (
     <View style={{width: '100%', height: '100%'}}>
