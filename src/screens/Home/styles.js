@@ -49,28 +49,24 @@ const styles = StyleSheet.create({
     marginTop: 0,
   },
   promoContanier: {
-    
-      height: 50,
-      padding: 15,
-      opacity: 0.9,
-  
-      // flexDirection:'row',
-      // alignItems: 'center',
-      // overflow: 'hidden',
-      flex: 1,
-  
-  
-  
-      shadowColor: "#000",
-      shadowOffset: {
-        width: 0,
-        height: 5,
-      },
-      shadowOpacity: 2.44,
-      shadowRadius: 9.27,
-  
-      elevation: 70,
-    
+    height: 50,
+    padding: 15,
+    opacity: 0.9,
+
+    // flexDirection:'row',
+    // alignItems: 'center',
+    // overflow: 'hidden',
+    flex: 1,
+
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 2.44,
+    shadowRadius: 9.27,
+
+    elevation: 70,
   },
   innerContainer: {
     height: 50,
@@ -81,21 +77,16 @@ const styles = StyleSheet.create({
     // overflow: 'hidden',
     color: 'midnightblue',
     flex: 1,
-  
-  
-  
-      shadowColor: "#000",
-      shadowOffset: {
-        width: 0,
-        height: 5,
-      },
-      shadowOpacity: 2.44,
-      shadowRadius: 9.27,
-  
-      elevation: 70,
-    
 
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 2.44,
+    shadowRadius: 9.27,
 
+    elevation: 70,
   },
   innerTwoContainer: {
     height: 50,
@@ -106,21 +97,16 @@ const styles = StyleSheet.create({
     // overflow: 'hidden',
     color: 'midnightblue',
     flex: 1,
-  
-  
-  
-      shadowColor: "#000",
-      shadowOffset: {
-        width: 0,
-        height: 5,
-      },
-      shadowOpacity: 2.44,
-      shadowRadius: 9.27,
-  
-      elevation: 70,
-    
 
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 2.44,
+    shadowRadius: 9.27,
 
+    elevation: 70,
   },
 
   imageTwo: {
@@ -183,7 +169,6 @@ const styles = StyleSheet.create({
     // marginLeft: 5,
     fontFamily: 'Savoye LET',
   },
-
 });
 
 export default styles;
